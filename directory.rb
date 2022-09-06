@@ -1,4 +1,4 @@
-#first we print the list pof students 
+#first we print the list of students 
 puts "The students of Villains Academy"
 puts "-------------"
 puts "Dr. Hannibal Lecter"
