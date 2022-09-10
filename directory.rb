@@ -10,7 +10,7 @@ def input_students
     while !name.empty? do
         #add the student hash to the array
         @students << {name: name, cohort: :november}
-        puts "Now we have #{students.count} students"
+        puts "Now we have #{@students.count} students"
         #get another name from user
         name = gets.chomp
     end
@@ -19,7 +19,7 @@ end
 def interactive_menu
     loop do
         print_menu
-        process = gets.chomp
+        process(gets.chomp)
     end  
 end
 
@@ -41,9 +41,9 @@ def process(selection)
        input_students
       when "2"
        show_students
-     when "9"
+      when "9"
        exit #this will cause the program to terminate
-     else
+      else
        puts "I don't know what you meant, try again"
     end
 end
@@ -59,7 +59,7 @@ def print_student_list
     end
 end
   
-def print_footer(students)
+def print_footer
     puts "Overall, we have #{@students.count} great students"
 end
 
